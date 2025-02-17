@@ -21,7 +21,7 @@ import java.util.HashSet;
 @SpringBootTest
 public class PeliculaIdiomaTests {
 
-    /*@Autowired
+    @Autowired
     IdiomaRepository idiomaRepository;
     @Autowired
     PeliculaRepository peliculaRepository;
@@ -43,23 +43,11 @@ public class PeliculaIdiomaTests {
         Idioma idioma1 = new Idioma(0, "español", new HashSet<>());
         idiomaRepository.save(idioma1);
 
-        Pelicula pelicula1 = new Pelicula(0, "Pelicula1", idioma1);
+        Pelicula pelicula1 = Pelicula.builder().id(1L).titulo("Pelicula1").idioma(idioma1).build();
         idioma1.getPeliculas().add(pelicula1);
         peliculaRepository.save(pelicula1);
-
-        Pelicula pelicula2 = new Pelicula(0, "Pelicula2", idioma1);
-        idioma1.getPeliculas().add(pelicula2);
-        peliculaRepository.save(pelicula2);
-
-        Idioma idioma2 = new Idioma(0, "inglés", new HashSet<>());
-        idiomaRepository.save(idioma2);
-
-        Pelicula pelicula3 = new Pelicula(0, "Pelicula3", idioma2);
-        idioma2.getPeliculas().add(pelicula3);
-        peliculaRepository.save(pelicula3);
-
     }
-
+    /*
     @Test
     @Order(2)
     void actualizarIdiomaPeliculaNull() {

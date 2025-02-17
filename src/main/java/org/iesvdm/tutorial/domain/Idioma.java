@@ -33,9 +33,9 @@ public class Idioma {
     private Set<Pelicula> peliculas = new HashSet<>();
 
 
-    @OneToMany(mappedBy = "idiomaOriginal", fetch = FetchType.EAGER)
+    //@OneToMany(mappedBy = "idiomaOriginal", fetch = FetchType.EAGER)
     //@JsonIgnore
     //@JsonManagedReference
-    private Set<Pelicula> peliculasIdiomaOriginal = new HashSet<>();
+    //private Set<Pelicula> peliculasIdiomaOriginal = new HashSet<>();
 
 }
